@@ -1,26 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
-<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011"
-                 xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
-  <Metadata>
-    <Identity Id="324cac6d-ff67-4e2e-8fc9-7a587b2d6045" Version="1.9.3" Language="en-US" Publisher="Dave McKeown" />
-    <DisplayName>Tidy Tabs</DisplayName>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="324cac6d-ff67-4e2e-8fc9-7a587b2d6045">
+    <Name>Tidy Tabs</Name>
+    <Author>Dave McKeown</Author>
+    <Version>1.9.3</Version>
+	<Locale>1033</Locale>
     <Description xml:space="preserve">Tidy Tabs keeps your document well organized by closing tabs that are no longer being used. Tabs that have not been viewed in a configurable amount of time can be closed with a keyboard shortcut (CTRL+ALT+ESC) or closed automatically whenever you save a document.</Description>
-    <MoreInfo>https://github.com/davemckeown/TidyTabs-VisualStudio</MoreInfo>
+    <MoreInfoUrl>https://github.com/davemckeown/TidyTabs-VisualStudio</MoreInfoUrl>
     <License>LICENSE.txt</License>
     <GettingStartedGuide>https://github.com/davemckeown/TidyTabs-VisualStudio</GettingStartedGuide>
     <ReleaseNotes>CHANGELOG.txt</ReleaseNotes>
     <Icon>Resources\icon.png</Icon>
     <PreviewImage>Resources\preview.png</PreviewImage>
-    <Tags>tabs, visual studio, coding</Tags>
-  </Metadata>
-  <Installation InstalledByMsi="false">
-    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[11.0,14.0]" />
-  </Installation>
-  <Dependencies>
-  </Dependencies>
-  <Assets>
-    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%"
-           Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
-  </Assets>
-</PackageManifest>
+    <InstalledByMsi>false</InstalledByMsi>
+    <SupportedProducts>
+        <IsolatedShell Version="7.0">AtmelStudio</IsolatedShell>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5" />
+  </Identifier>
+  <References />
+  <Content>
+    <VsPackage>|%CurrentProject%;PkgdefProjectOutputGroup|</VsPackage>
+  </Content>
+</Vsix>
